@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-import { GraduationCap, Target, Download, MapPin, Calendar } from 'lucide-react';
+import { GraduationCap, Target, Download, MapPin, Calendar, Award } from 'lucide-react';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -114,7 +114,7 @@ export default function About() {
                 </div>
               </motion.div>
 
-              <motion.div variants={fadeUp} initial="hidden" whileInView="visible" custom={0.5} viewport={{ once: true }}
+              <motion.div variants={fadeUp} initial="hidden" whileInView="visible" custom={0.4} viewport={{ once: true }}
                 className="bg-white dark:bg-gray-900 rounded-2xl p-6 border border-gray-200 dark:border-gray-800 shadow-sm flex flex-col justify-between">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-50 to-blue-600 flex items-center justify-center flex-shrink-0">
@@ -130,7 +130,33 @@ export default function About() {
                 </div>
               </motion.div>
 
-              <motion.div variants={fadeUp} initial="hidden" whileInView="visible" custom={1} viewport={{ once: true }}
+              <motion.div variants={fadeUp} initial="hidden" whileInView="visible" custom={0.8} viewport={{ once: true }}
+                className="bg-white dark:bg-gray-900 rounded-2xl p-6 border border-gray-200 dark:border-gray-800 shadow-sm flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-50 to-blue-600 flex items-center justify-center flex-shrink-0">
+                      <Award size={22} className="text-white" />
+                    </div>
+                    <h3 className="font-bold text-gray-900 dark:text-white">Certifications &amp; Training</h3>
+                  </div>
+                  <div className="space-y-4">
+                    <div>
+                      <h4 className="font-semibold text-gray-900 dark:text-white text-sm">ALX Software Engineering Program</h4>
+                      <p className="text-gray-600 dark:text-gray-400 text-xs mt-1 leading-relaxed">
+                        Completed intensive training in software development, earning a professional certificate. Focused on building scalable applications, version control, and collaborative coding practices.
+                      </p>
+                    </div>
+                    <div className="border-t border-gray-100 dark:border-gray-800/80 pt-3">
+                      <h4 className="font-semibold text-gray-900 dark:text-white text-sm">Udemy Web Development Bootcamp</h4>
+                      <p className="text-gray-600 dark:text-gray-400 text-xs mt-1 leading-relaxed">
+                        Mastered frontend technologies through hands-on projects, emphasizing modern web standards and user interface design.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div variants={fadeUp} initial="hidden" whileInView="visible" custom={1.2} viewport={{ once: true }}
                 className="bg-gradient-to-br from-cyan-50 to-blue-50 dark:from-cyan-950/20 dark:to-blue-950/20 rounded-2xl p-6 border border-cyan-100 dark:border-cyan-900/50">
                 <div className="flex items-center gap-3 mb-3">
                   <Target size={20} className="text-cyan-500" />

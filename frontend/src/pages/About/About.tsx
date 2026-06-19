@@ -29,7 +29,7 @@ export default function About() {
 
           <div className="grid lg:grid-cols-12 gap-12 items-center mb-16">
             {/* Left Column: Image with animated frame and glows */}
-            <motion.div 
+            <motion.div
               className="lg:col-span-5 flex justify-center relative"
               variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} custom={0}
             >
@@ -43,14 +43,14 @@ export default function About() {
               {/* Glowing behind image */}
               <div className="absolute w-[200px] h-[200px] sm:w-[260px] sm:h-[260px] rounded-full bg-gradient-to-tr from-cyan-500 to-purple-600 opacity-10 blur-xl animate-pulse" />
 
-              <motion.div 
+              <motion.div
                 className="relative w-[200px] h-[200px] sm:w-[260px] sm:h-[260px] rounded-2xl overflow-hidden border-4 border-cyan-500/10 shadow-2xl z-10"
                 whileHover={{ scale: 1.03 }}
                 transition={{ type: 'spring', stiffness: 300, damping: 20 }}
               >
-                <img 
-                  src="/john_paul_profile.png" 
-                  alt="John Paul Uzowuru" 
+                <img
+                  src="/john_paul_profile.png"
+                  alt="John Paul Uzowuru"
                   className="w-full h-full object-cover"
                 />
               </motion.div>
@@ -61,13 +61,13 @@ export default function About() {
               <motion.div variants={fadeUp} initial="hidden" whileInView="visible" custom={1} viewport={{ once: true }}>
                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">A Passionate Engineer &amp; Developer</h2>
                 <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
-                  I'm a recently graduated Electrical and Electronics Engineer with hands-on experience in frontend development and a deep interest in how technology can solve real engineering problems. I enjoy bridging the gap between hardware systems and modern web applications.
+                  I am a proactive and results-driven engineer, with a strong passion for leadership, teamwork, and continuous growth. Through executive roles and technical projects, I have developed the ability to coordinate teams, communicate effectively, and drive initiative to completion.
                 </p>
                 <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
-                  During my studies, I developed a strong foundation in power systems, automation and control, and circuit design — while simultaneously teaching myself React, Node.js, and full-stack web development.
+                  With a solid foundation in Electrical and Electronic Engineering and hands-on experience in control system and automation at Yokogawa Nigeria Limited, I bring strong analytical and system-thinking skills to problem-solving.
                 </p>
                 <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                  I'm now looking for opportunities where I can apply both my engineering background and web development skills to build impactful products.
+                  I am building my career as a full stack software Engineer, with experiences developing responsive application using HTML, CSS, JAVASCRIPT, VUE.JS and REACT.JS frame-work, alongside foundational knowledge in Python, C language and shell scripting. I am committed to leveraging engineering principles and modern software development to deliver innovative an impactful solution.
                 </p>
               </motion.div>
             </div>
@@ -105,10 +105,10 @@ export default function About() {
                   </div>
                   <div>
                     <h3 className="font-bold text-gray-900 dark:text-white">B.Eng. Electrical &amp; Electronics Engineering</h3>
-                    <p className="text-gray-600 dark:text-gray-300 text-sm mt-1">Federal University of Technology</p>
-                    <div className="flex items-center gap-3 mt-3">
-                      <span className="px-3 py-1 bg-cyan-50 dark:bg-cyan-950/40 text-cyan-600 dark:text-cyan-400 rounded-full text-xs font-medium">2020 – 2024</span>
-                      <span className="px-3 py-1 bg-green-50 dark:bg-green-950/40 text-green-600 dark:text-green-400 rounded-full text-xs font-medium">First Class (GPA: 4.8)</span>
+                    <p className="text-gray-600 dark:text-gray-300 text-sm mt-1">Niger Delta University (NDU)</p>
+                    <div className="flex flex-wrap items-center gap-3 mt-3">
+                      <span className="px-4.5 py-1 bg-cyan-50 dark:bg-cyan-950/40 text-cyan-600 dark:text-cyan-400 rounded-full text-xs font-medium whitespace-nowrap">2020 – 2025</span>
+                      <span className="px-4.5 py-1 bg-green-50 dark:bg-green-950/40 text-green-600 dark:text-green-400 rounded-full text-xs font-medium whitespace-nowrap">Second Class Upper (GPA: 4.01)</span>
                     </div>
                   </div>
                 </div>

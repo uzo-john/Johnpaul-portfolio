@@ -100,7 +100,7 @@ export default function About() {
               <motion.div variants={fadeUp} initial="hidden" whileInView="visible" custom={0} viewport={{ once: true }}
                 className="bg-white dark:bg-gray-900 rounded-2xl p-6 border border-gray-200 dark:border-gray-800 shadow-sm flex flex-col justify-between">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-50 to-blue-600 flex items-center justify-center flex-shrink-0">
                     <GraduationCap size={22} className="text-white" />
                   </div>
                   <div>
@@ -109,6 +109,22 @@ export default function About() {
                     <div className="flex flex-wrap items-center gap-3 mt-3">
                       <span className="px-4.5 py-1 bg-cyan-50 dark:bg-cyan-950/40 text-cyan-600 dark:text-cyan-400 rounded-full text-xs font-medium whitespace-nowrap">2020 – 2025</span>
                       <span className="px-4.5 py-1 bg-green-50 dark:bg-green-950/40 text-green-600 dark:text-green-400 rounded-full text-xs font-medium whitespace-nowrap">Second Class Upper (GPA: 4.01)</span>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div variants={fadeUp} initial="hidden" whileInView="visible" custom={0.5} viewport={{ once: true }}
+                className="bg-white dark:bg-gray-900 rounded-2xl p-6 border border-gray-200 dark:border-gray-800 shadow-sm flex flex-col justify-between">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-50 to-blue-600 flex items-center justify-center flex-shrink-0">
+                    <GraduationCap size={22} className="text-white" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-gray-900 dark:text-white">West African Senior School Certificate (WAEC)</h3>
+                    <p className="text-gray-600 dark:text-gray-300 text-sm mt-1">Irvington College, Lagos</p>
+                    <div className="flex flex-wrap items-center gap-3 mt-3">
+                      <span className="px-4.5 py-1 bg-cyan-50 dark:bg-cyan-950/40 text-cyan-600 dark:text-cyan-400 rounded-full text-xs font-medium whitespace-nowrap">2016 – 2018</span>
                     </div>
                   </div>
                 </div>

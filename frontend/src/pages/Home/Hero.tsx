@@ -80,7 +80,7 @@ export default function Hero() {
 
           <motion.p variants={fadeUp} initial="hidden" animate="visible" custom={3}
             className="text-gray-400 max-w-xl mb-10 text-base sm:text-lg leading-relaxed">
-            A recently graduated Electrical &amp; Electronics Engineer with a passion for frontend development, smart grid systems, and building digital solutions that make an impact.
+            A recently graduated Electrical &amp; Electronics Engineer with a passion for frontend development, smart grid systems, and creating innovative digital solutions that solve real-world problems and drive meaningful impact.
           </motion.p>
 
           <motion.div variants={fadeUp} initial="hidden" animate="visible" custom={4} className="flex flex-wrap justify-center lg:justify-start gap-4 mb-10">

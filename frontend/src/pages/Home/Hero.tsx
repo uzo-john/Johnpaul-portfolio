@@ -40,7 +40,7 @@ export default function Hero() {
   const typeRef = useTypewriter(ROLES);
 
   return (
-    <section id="home" className="relative min-h-screen flex flex-col items-center justify-center pt-24 pb-16 overflow-hidden bg-gray-950">
+    <section id="home" className="relative min-h-screen flex flex-col items-center justify-center pt-24 pb-16 overflow-hidden bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100">
       {/* Background orbs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {Array.from({ length: 20 }).map((_, i) => (
@@ -65,7 +65,7 @@ export default function Hero() {
           </motion.div>
 
           <motion.h1 variants={fadeUp} initial="hidden" animate="visible" custom={1}
-            className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight mb-4 text-white">
+            className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight mb-4 text-gray-900 dark:text-white">
             Hi, I'm{' '}
             <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">
               Johnpaul Uzowuru
@@ -73,13 +73,13 @@ export default function Hero() {
           </motion.h1>
 
           <motion.p variants={fadeUp} initial="hidden" animate="visible" custom={2}
-            className="text-xl sm:text-2xl text-gray-300 mb-6 h-8">
+            className="text-xl sm:text-2xl text-gray-700 dark:text-gray-300 mb-6 h-8">
             I'm a{' '}
             <span ref={typeRef} className="text-cyan-400 font-semibold border-r-2 border-cyan-400 pr-0.5" />
           </motion.p>
 
           <motion.p variants={fadeUp} initial="hidden" animate="visible" custom={3}
-            className="text-gray-400 max-w-xl mb-10 text-base sm:text-lg leading-relaxed">
+            className="text-gray-600 dark:text-gray-400 max-w-xl mb-10 text-base sm:text-lg leading-relaxed">
             A recently graduated Electrical &amp; Electronics Engineer with a passion for frontend development, smart grid systems, and creating innovative digital solutions that solve real-world problems and drive meaningful impact.
           </motion.p>
 
@@ -87,10 +87,10 @@ export default function Hero() {
             <Link to="/projects" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold hover:shadow-lg hover:shadow-cyan-500/25 hover:-translate-y-0.5 transition-all duration-200">
               View Projects <ArrowRight size={18} />
             </Link>
-            <a href="/JOHNPAUL_UZOWURU_CV.pdf" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border-2 border-gray-700 text-gray-300 font-semibold hover:border-cyan-500 hover:text-cyan-500 hover:-translate-y-0.5 transition-all duration-200">
+            <a href="/JOHNPAUL_UZOWURU_CV.pdf" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border-2 border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 font-semibold hover:border-cyan-500 dark:hover:border-cyan-500 hover:text-cyan-500 dark:hover:text-cyan-500 hover:-translate-y-0.5 transition-all duration-200">
               Download CV <Download size={18} />
             </a>
-            <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gray-800 text-gray-300 font-semibold hover:bg-gray-700 hover:-translate-y-0.5 transition-all duration-200">
+            <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 font-semibold hover:bg-gray-200 dark:hover:bg-gray-700 hover:-translate-y-0.5 transition-all duration-200">
               Contact Me
             </Link>
           </motion.div>
@@ -101,7 +101,7 @@ export default function Hero() {
               { href: 'https://linkedin.com/in/johnpaul-uzowuru-952821253', Icon: Briefcase, label: 'LinkedIn' },
             ].map(({ href, Icon, label }) => (
               <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label}
-                className="w-11 h-11 rounded-xl border border-gray-800 flex items-center justify-center text-gray-400 hover:text-cyan-500 hover:border-cyan-500 transition-all duration-200 hover:-translate-y-0.5">
+                className="w-11 h-11 rounded-xl border border-gray-200 dark:border-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:text-cyan-500 dark:hover:text-cyan-500 transition-all duration-200 hover:-translate-y-0.5">
                 <Icon size={20} />
               </a>
             ))}

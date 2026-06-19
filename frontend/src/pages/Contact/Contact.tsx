@@ -105,7 +105,7 @@ export default function Contact() {
                 <div className="flex gap-3">
                   {[
                     { href: 'https://github.com/uzo-john', Icon: Github, label: 'GitHub' },
-                    { href: 'https://linkedin.com/in/johnpauluzowuru', Icon: Linkedin, label: 'LinkedIn' },
+                    { href: 'https://linkedin.com/in/johnpaul-uzowuru-952821253', Icon: Linkedin, label: 'LinkedIn' },
                   ].map(({ href, Icon, label }) => (
                     <a
                       key={label}

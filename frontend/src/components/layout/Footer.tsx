@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { Briefcase, AtSign, Mail, Code2, Heart } from 'lucide-react';
 
 const socials = [
-  { label: 'GitHub', href: 'https://github.com/johnpauluzowuru', Icon: Code2 },
+  { label: 'GitHub', href: 'https://github.com/uzo-john', Icon: Code2 },
   { label: 'LinkedIn', href: 'https://linkedin.com/in/johnpauluzowuru', Icon: Briefcase },
   { label: 'Twitter', href: 'https://twitter.com/johnpauluzowuru', Icon: AtSign },
   { label: 'Email', href: 'mailto:johnpauluzowuru2018@gmail.com', Icon: Mail },

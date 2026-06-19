@@ -97,7 +97,7 @@ export default function Hero() {
 
           <motion.div variants={fadeUp} initial="hidden" animate="visible" custom={5} className="flex gap-4">
             {[
-              { href: 'https://github.com/johnpauluzowuru', Icon: Code2, label: 'GitHub' },
+              { href: 'https://github.com/uzo-john', Icon: Code2, label: 'GitHub' },
               { href: 'https://linkedin.com/in/johnpauluzowuru', Icon: Briefcase, label: 'LinkedIn' },
             ].map(({ href, Icon, label }) => (
               <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label}

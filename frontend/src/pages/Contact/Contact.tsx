@@ -79,7 +79,7 @@ export default function Contact() {
               className="lg:col-span-2 space-y-6"
             >
               {[
-                { Icon: Mail, label: 'Email', value: 'your@email.com', href: 'mailto:your@email.com' },
+                { Icon: Mail, label: 'Email', value: 'johnpauluzowuru2018@gmail.com', href: 'mailto:johnpauluzowuru2018@gmail.com' },
                 { Icon: MapPin, label: 'Location', value: 'Nigeria', href: null },
                 { Icon: Phone, label: 'Available', value: 'Mon – Fri, 9am – 6pm', href: null },
               ].map(({ Icon, label, value, href }) => (
@@ -104,7 +104,7 @@ export default function Contact() {
                 <p className="text-sm text-gray-500 dark:text-gray-400 mb-3">Find me on</p>
                 <div className="flex gap-3">
                   {[
-                    { href: 'https://github.com/johnpauluzowuru', Icon: Github, label: 'GitHub' },
+                    { href: 'https://github.com/uzo-john', Icon: Github, label: 'GitHub' },
                     { href: 'https://linkedin.com/in/johnpauluzowuru', Icon: Linkedin, label: 'LinkedIn' },
                   ].map(({ href, Icon, label }) => (
                     <a

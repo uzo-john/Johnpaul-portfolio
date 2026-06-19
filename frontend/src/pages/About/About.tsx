@@ -9,7 +9,7 @@ const fadeUp = {
 
 const highlights = [
   { label: 'Location', value: 'Nigeria', Icon: MapPin },
-  { label: 'Graduated', value: '2024', Icon: Calendar },
+  { label: 'Graduated', value: '2025', Icon: Calendar },
   { label: 'Focus', value: 'Web Dev + EEE', Icon: Target },
 ];
 

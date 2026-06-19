@@ -88,7 +88,7 @@ export default function About() {
               </motion.div>
               <div className="text-center lg:text-left">
                 <motion.a variants={fadeUp} initial="hidden" whileInView="visible" custom={1} viewport={{ once: true }}
-                  href="/JOHNPAUL_UZOWURU_CV.pdf" download
+                  href="/JOHNPAUL_UZOWURU_CV.pdf" target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold hover:shadow-lg hover:shadow-cyan-500/25 hover:-translate-y-0.5 transition-all duration-200">
                   <Download size={18} /> Download Resume / CV
                 </motion.a>

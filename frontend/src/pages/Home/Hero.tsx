@@ -68,7 +68,7 @@ export default function Hero() {
             className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight mb-4 text-white">
             Hi, I'm{' '}
             <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">
-              John Paul Uzowuru
+              Johnpaul Uzowuru
             </span>
           </motion.h1>
 
@@ -87,7 +87,7 @@ export default function Hero() {
             <Link to="/projects" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold hover:shadow-lg hover:shadow-cyan-500/25 hover:-translate-y-0.5 transition-all duration-200">
               View Projects <ArrowRight size={18} />
             </Link>
-            <a href="/resume.pdf" download className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border-2 border-gray-700 text-gray-300 font-semibold hover:border-cyan-500 hover:text-cyan-500 hover:-translate-y-0.5 transition-all duration-200">
+            <a href="/JOHNPAUL_UZOWURU_CV.pdf" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border-2 border-gray-700 text-gray-300 font-semibold hover:border-cyan-500 hover:text-cyan-500 hover:-translate-y-0.5 transition-all duration-200">
               Download CV <Download size={18} />
             </a>
             <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gray-800 text-gray-300 font-semibold hover:bg-gray-700 hover:-translate-y-0.5 transition-all duration-200">
@@ -109,7 +109,7 @@ export default function Hero() {
         </div>
 
         {/* Right Column: Profile Picture with Motion Animations */}
-        <motion.div 
+        <motion.div
           className="lg:col-span-5 flex justify-center items-center relative"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -126,14 +126,14 @@ export default function Hero() {
           <div className="absolute w-[240px] h-[240px] sm:w-[320px] sm:h-[320px] rounded-full bg-gradient-to-tr from-cyan-500 to-purple-600 opacity-20 blur-2xl animate-pulse" />
 
           {/* Rounded Image Container */}
-          <motion.div 
+          <motion.div
             className="relative w-[240px] h-[240px] sm:w-[320px] sm:h-[320px] rounded-full overflow-hidden border-4 border-cyan-500/20 shadow-2xl z-10"
             whileHover={{ scale: 1.05, borderColor: 'rgba(6, 182, 212, 0.4)' }}
             transition={{ type: 'spring', stiffness: 300, damping: 20 }}
           >
-            <img 
-              src="/john_paul_profile.png" 
-              alt="John Paul Uzowuru" 
+            <img
+              src="/john_paul_profile.png"
+              alt="John Paul Uzowuru"
               className="w-full h-full object-cover"
             />
           </motion.div>

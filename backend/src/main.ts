@@ -36,7 +36,16 @@ async function bootstrap() {
   ).split(',');
   app.enableCors({
     origin: (origin, callback) => {
-      if (!origin || allowedOrigins.includes(origin)) {
+      if (!origin) {
+        callback(null, true);
+        return;
+      }
+
+      // Check if origin matches allowed origins list or is a Vercel preview for this project
+      const isAllowed = allowedOrigins.includes(origin);
+      const isVercelPreview = /^https:\/\/johnpaul-portfolio(-.*)?\.vercel\.app$/.test(origin);
+
+      if (isAllowed || isVercelPreview) {
         callback(null, true);
       } else {
         callback(new Error('Not allowed by CORS'));

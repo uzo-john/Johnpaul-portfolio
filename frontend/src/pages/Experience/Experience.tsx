@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { Briefcase, Users, Shield, Calendar, MapPin, GraduationCap, Sparkles } from 'lucide-react';
 
@@ -115,7 +115,7 @@ const memberships = [
   },
 ];
 
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 20 },
   visible: (i = 0) => ({ opacity: 1, y: 0, transition: { delay: i * 0.1, duration: 0.5, ease: 'easeOut' } }),
 };
@@ -189,7 +189,7 @@ export default function Experience() {
 
             <div className="space-y-12">
               <AnimatePresence mode="popLayout">
-                {filteredExperiences.map(({ title, organization, location, period, icon: Icon, color, typeColor, type, highlights }, i) => (
+                {filteredExperiences.map(({ title, organization, location, period, icon: Icon, color, typeColor, type, highlights }) => (
                   <motion.div
                     key={title}
                     layout

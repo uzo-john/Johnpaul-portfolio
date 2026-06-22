@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Sun, Moon, Menu, X, Code2 } from 'lucide-react';
+import { Sun, Moon, Menu, X, Zap } from 'lucide-react';
 import { useTheme } from '../../context/ThemeContext';
 
 const navLinks = [
@@ -31,10 +31,11 @@ export default function Navbar() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 text-xl font-bold text-gray-900 dark:text-white">
           <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center">
-            <Code2 size={18} className="text-white" />
+            <Zap size={16} className="text-white fill-white" />
           </div>
-          <span className="hidden sm:block"><span className="text-cyan-500">Dev</span>Portfolio</span>
+          <span className="hidden sm:block"><span className="text-cyan-500">JohnPaul</span>.dev</span>
         </Link>
+
 
         <ul className="hidden lg:flex items-center gap-1">
           {navLinks.map(({ label, to }) => (

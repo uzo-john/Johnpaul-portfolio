@@ -194,26 +194,155 @@ Smart grids reduce energy waste, improve reliability, and enable integration of 
       readTime: 6,
     },
     {
-      title: 'My Journey: From Engineering to Web Development',
-      slug: 'engineering-to-web-development-journey',
-      excerpt:
-        'How my background in electrical engineering shaped the way I approach web development and software architecture.',
-      content: `# My Journey
+      title: 'Electrical Energy Management in Nigeria: Practical Strategies for Reducing Power Consumption and Costs',
+      slug: 'electrical-energy-management-in-nigeria-practical-strategies-for-reducing-power-consumption-and-costs',
+      excerpt: 'Managing electrical consumption in Nigeria is essential due to rising energy costs and unreliable power supply. Using energy-efficient appliances such as LED bulbs and inverter systems, turning off unused devices, and monitoring electricity usage can significantly reduce energy waste. Additionally, adopting solar energy solutions helps reduce dependence on the national grid and generators. These practices lower electricity bills, improve energy efficiency, and promote a more sustainable and reliable power system.',
+      content: `Electrical Energy Management in Nigeria: Practical Strategies for Reducing Power Consumption and Costs
 
-When I started studying Electrical & Electronics Engineering, I never imagined I'd end up passionate about web development too...
+Introduction
 
-## The Connection
-Engineering taught me to think in systems. Every circuit is a system with inputs, processing, and outputs — just like a web application.
+Nigeria's power sector continues to face significant challenges, including unstable grid supply, rising electricity tariffs, increasing fuel prices, and growing energy demand. As a result, effective electrical energy management has become a necessity for households, commercial facilities, and industrial organisations.
 
-## Skills Transfer
-- Problem decomposition
-- Debugging systematically
-- Documentation habits
-- Attention to edge cases`,
-      tags: ['Career', 'Web Development', 'Engineering', 'Personal'],
+Energy management involves the systematic monitoring, control, and optimisation of electrical energy usage to improve efficiency while maintaining productivity and comfort. By adopting proper energy management practices, Nigerians can significantly reduce electricity costs, improve equipment lifespan, and minimise dependence on generators.
+
+Understanding Electrical Energy Consumption
+
+Electrical energy consumption is measured in kilowatt-hours (kWh), which represents the amount of energy consumed by a device over a specified period.
+
+The energy consumed by an appliance can be calculated using:
+
+Energy (kWh) = Power (kW) × Time (Hours)**
+
+For example:
+
+* A 60W LED television operating for 10 hours consumes the following:
+
+  0.06 × 10 = 0.6 kWh
+
+* A 1.5 kW air conditioner operating for 8 hours consumes:
+
+  1.5 × 8 = 12 kWh
+
+Understanding these calculations helps consumers identify which appliances contribute most to their electricity bills.
+
+Major Sources of Energy Waste in Nigerian Homes
+
+Many households unknowingly waste electricity through inefficient practices. Common examples include:
+
+1. Inefficient Lighting Systems
+
+Traditional incandescent bulbs consume significantly more energy than modern LED lamps. Replacing conventional bulbs with LEDs can reduce lighting energy consumption by up to 80%.
+
+2. Poor Appliance Selection
+
+Older refrigerators, freezers, and air conditioners often consume more power due to outdated technology and wear.
+
+3. Standby Power Losses
+
+Devices such as televisions, decoders, chargers, microwaves, and sound systems continue drawing power even when switched off through remote controls.
+
+4. Poor Power Factor
+
+Commercial and industrial facilities often suffer from poor power factor due to inductive loads such as motors and transformers. This leads to inefficient power utilisation and increased operating costs.
+
+Practical Energy Management Strategies
+
+Upgrade to Energy-Efficient Equipment
+
+Investing in inverter-based appliances and energy-efficient equipment can significantly reduce energy consumption.
+
+Examples include:
+
+* Inverter air conditioners
+* LED lighting systems
+* Energy-efficient refrigerators
+* Variable speed drives (VSDs)
+* High-efficiency electric motors
+
+Although the initial investment may be higher, the long-term savings usually justify the cost.
+
+Conduct Energy Audits
+
+An energy audit identifies areas where energy is being wasted and provides recommendations for improvement.
+
+A comprehensive audit typically examines:
+
+* Lighting systems
+* Air conditioning systems
+* Electrical distribution networks
+* Motor-driven equipment
+* Generator performance
+* Renewable energy opportunities
+
+Energy audits are among the most effective methods for reducing operational costs.
+
+Implement Load Management
+
+Load management involves controlling when and how electrical loads operate.
+
+Examples include:
+
+* Running heavy appliances during off-peak periods
+* Scheduling industrial processes efficiently
+* Disconnecting non-essential loads during generator operation
+* Using automatic control systems
+
+This strategy prevents unnecessary energy consumption and improves system efficiency.
+
+Solar Energy as a Long-Term Solution
+
+Nigeria receives abundant solar radiation throughout the year, making solar photovoltaic (PV) systems one of the most practical alternatives to grid electricity and generators.
+
+Benefits include:
+
+* Reduced electricity bills
+* Lower fuel consumption
+* Reduced carbon emissions
+* Increased energy independence
+* Improved reliability during grid failures
+
+Modern solar installations combined with lithium battery storage can provide stable power for homes, offices, schools, and healthcare facilities.
+
+Smart Grid Technologies and the Future of Energy Management
+
+The future of Nigeria's power sector lies in smart energy systems.
+
+Smart grid technologies enable:
+
+* Real-time monitoring of electricity consumption
+* Automated fault detection
+* Improved load balancing
+* Demand-side management
+* Remote meter reading
+* Enhanced grid reliability
+
+By integrating intelligent monitoring and control systems, power utilities can improve efficiency while consumers gain greater visibility into their energy usage.
+
+The Role of Engineers in Energy Conservation
+
+Electrical engineers play a critical role in promoting energy efficiency through:
+
+* System design optimization
+* Power quality improvement
+* Renewable energy integration
+* Protection coordination
+* Smart grid development
+* Energy auditing and consulting
+
+As Nigeria's energy demand continues to grow, engineering innovations will be essential for building a more reliable and sustainable power infrastructure.
+
+Conclusion
+
+Effective electrical energy management is one of the most practical solutions to Nigeria's ongoing power challenges. Whether in homes, businesses, or industrial facilities, reducing energy waste leads to lower operating costs, improved reliability, and better utilisation of available power resources.
+
+By combining energy-efficient technologies, regular energy audits, smart monitoring systems, and renewable energy solutions, Nigerians can achieve substantial savings while contributing to a more sustainable energy future.
+
+The most affordable unit of electricity is the one that is never wasted. Therefore, energy efficiency should not be viewed as an option but as a fundamental strategy for economic growth and sustainable development in Nigeria.`,
+      tags: ['Electrical Energy Management in Nigeria', 'Energy Efficiency', 'Electricity Consumption', 'Smart Grid Technology', 'Solar Energy Nigeria', 'Power Distribution', 'Energy Audit', 'Electrical Engineering', 'Renewable Energy', 'Electricity Cost Reduction'],
       published: true,
-      publishedAt: new Date('2024-05-01'),
+      publishedAt: new Date('2026-06-22'),
       readTime: 5,
+      coverImage: '/energy_management.png',
     },
   ];
 
@@ -221,13 +350,32 @@ Engineering taught me to think in systems. Every circuit is a system with inputs
     const { tags, ...rest } = blog;
     await prisma.blogPost.upsert({
       where: { slug: blog.slug },
-      update: {},
+      update: {
+        title: rest.title,
+        excerpt: rest.excerpt,
+        content: rest.content,
+        coverImage: rest.coverImage,
+        tags: tags.join(','),
+        published: rest.published,
+        publishedAt: rest.publishedAt,
+        readTime: rest.readTime,
+      },
       create: {
         ...rest,
         tags: tags.join(','),
       },
     });
   }
+
+  // Prune blog posts not present in the seed file
+  const activeSlugs = blogs.map((b) => b.slug);
+  await prisma.blogPost.deleteMany({
+    where: {
+      slug: { notIn: activeSlugs },
+    },
+  });
+
+
 
   console.log(`✅ ${blogs.length} blog posts seeded`);
   console.log('🎉 Database seeding complete!');

@@ -14,12 +14,12 @@ export class CreateBlogPostDto {
   @ApiProperty()
   @IsString()
   @MinLength(20)
-  @MaxLength(300)
+  @MaxLength(600)
   excerpt: string;
 
   @ApiProperty()
   @IsString()
-  @MinLength(50)
+  @MinLength(1000)
   content: string;
 
   @ApiPropertyOptional()

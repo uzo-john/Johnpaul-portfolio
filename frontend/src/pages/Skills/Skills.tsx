@@ -4,10 +4,10 @@ import { Code2, Terminal, Users, Sparkles, CheckCircle2 } from 'lucide-react';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
-  visible: (i = 0) => ({ 
-    opacity: 1, 
-    y: 0, 
-    transition: { delay: i * 0.1, duration: 0.6, ease: 'easeOut' as const } 
+  visible: (i = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.1, duration: 0.6, ease: 'easeOut' as const }
   }),
 };
 
@@ -48,9 +48,9 @@ const skillCategories = [
     accentColor: 'text-orange-500 dark:text-orange-400 bg-orange-500/10 border-orange-500/20',
     skills: [
       { name: 'Problem Solving', level: 88 },
-      { name: 'Team Collaboration', level: 85 },
+      { name: 'Team Collaboration', level: 95 },
       { name: 'Technical Writing', level: 78 },
-      { name: 'Communication', level: 80 },
+      { name: 'Communication', level: 90 },
       { name: 'Self-Learning', level: 92 },
       { name: 'Time Management', level: 76 },
     ],
@@ -59,7 +59,7 @@ const skillCategories = [
 
 function SkillBar({ name, level, color, delay }: { name: string; level: number; color: string; delay: number }) {
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0, y: 15 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: delay * 0.08 + 0.15, duration: 0.4, ease: 'easeOut' }}
@@ -95,7 +95,7 @@ export default function Skills() {
         <title>Skills | Portfolio</title>
         <meta name="description" content="Technical skills in frontend development, electrical engineering tools, automation, and backend technologies." />
       </Helmet>
-      
+
       <div className="relative min-h-screen pt-24 pb-20 overflow-hidden bg-transparent text-gray-700 dark:text-gray-300">
         {/* Grid and Radial backdrops */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800b_1px,transparent_1px),linear-gradient(to_bottom,#8080800b_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none" />
@@ -107,11 +107,11 @@ export default function Skills() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
-          <motion.div 
-            variants={fadeUp} 
-            initial="hidden" 
-            whileInView="visible" 
-            viewport={{ once: true }} 
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-500 dark:text-cyan-400 text-xs font-semibold uppercase tracking-widest mb-3">
@@ -128,18 +128,18 @@ export default function Skills() {
           {/* Cards Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {skillCategories.map(({ title, description, icon: Icon, color, accentColor, skills }, i) => (
-              <motion.div 
-                key={title} 
-                variants={fadeUp} 
-                initial="hidden" 
-                whileInView="visible" 
+              <motion.div
+                key={title}
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="visible"
                 viewport={{ once: true }}
                 custom={i * 0.1}
                 className="group relative bg-gradient-to-br from-gray-50 to-gray-100/50 dark:from-gray-900/60 dark:to-gray-900/35 border border-gray-200 dark:border-gray-800/80 rounded-2xl p-6 hover:border-cyan-500/30 hover:bg-white dark:hover:bg-gray-900/60 transition-all duration-300 backdrop-blur-xl shadow-sm dark:shadow-none"
               >
                 {/* Glowing border accent */}
                 <div className={`absolute top-0 left-0 w-full h-[2px] rounded-t-2xl bg-gradient-to-r ${color} opacity-30 group-hover:opacity-100 transition-opacity`} />
-                
+
                 <div className="flex items-center gap-4 mb-4">
                   <div className={`w-12 h-12 rounded-xl flex items-center justify-center border ${accentColor} group-hover:scale-110 transition-transform duration-300`}>
                     <Icon size={24} />
@@ -148,7 +148,7 @@ export default function Skills() {
                     <h2 className="font-bold text-gray-900 dark:text-white text-lg group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">{title}</h2>
                   </div>
                 </div>
-                
+
                 <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-6 h-12">
                   {description}
                 </p>

@@ -16,7 +16,7 @@ const services = [
     title: 'Engineering Consulting',
     description:
       'Technical consulting for small-scale electrical and electronics engineering projects — from design to simulation.',
-    features: ['Circuit design review', 'MATLAB/Simulink simulations', 'Power systems analysis', 'Technical documentation'],
+    features: ['Circuit design review', 'Power systems analysis', 'Technical documentation'],
     color: 'from-purple-500 to-indigo-500',
   },
   {
@@ -24,7 +24,7 @@ const services = [
     title: 'Technical Training',
     description:
       'Helping beginners get started with web development or core electrical engineering concepts through structured mentoring.',
-    features: ['HTML/CSS/JavaScript basics', 'React fundamentals', 'Engineering mathematics', 'Study guidance'],
+    features: ['HTML/CSS/JavaScript basics', 'React fundamentals', 'Study guidance'],
     color: 'from-green-500 to-emerald-500',
   },
   {

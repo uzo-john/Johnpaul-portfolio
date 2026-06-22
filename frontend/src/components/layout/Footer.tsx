@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Briefcase, AtSign, Mail, Code2, Heart } from 'lucide-react';
+import { Briefcase, AtSign, Mail, Code2, Heart, Zap } from 'lucide-react';
 
 const socials = [
   { label: 'GitHub', href: 'https://github.com/uzo-john', Icon: Code2 },
@@ -24,9 +24,9 @@ export default function Footer() {
           <div>
             <Link to="/" className="flex items-center gap-2 mb-4">
               <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center">
-                <Code2 size={18} className="text-white" />
+                <Zap size={16} className="text-white fill-white" />
               </div>
-              <span className="text-gray-900 dark:text-white font-bold text-lg"><span className="text-cyan-500">Dev</span>Portfolio</span>
+              <span className="text-gray-900 dark:text-white font-bold text-lg"><span className="text-cyan-500">JohnPaul</span>.dev</span>
             </Link>
             <p className="text-sm leading-relaxed">Frontend Developer & Electrical Engineer passionate about building elegant solutions at the intersection of technology and engineering.</p>
           </div>

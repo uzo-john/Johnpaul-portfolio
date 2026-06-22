@@ -26,8 +26,19 @@ export default function AdminLogin() {
     try {
       await login(data.email, data.password);
       navigate('/admin');
-    } catch {
-      toast.error('Invalid credentials. Please try again.');
+    } catch (error: any) {
+      console.error('Login error:', error);
+      if (error.response) {
+        if (error.response.status === 401) {
+          toast.error('Invalid credentials. Please try again.');
+        } else {
+          toast.error(error.response.data?.message || `Server error: ${error.response.status}`);
+        }
+      } else if (error.request) {
+        toast.error('Network error. Cannot reach the backend API. Please check your connection.');
+      } else {
+        toast.error(error.message || 'An unexpected error occurred.');
+      }
     } finally {
       setLoading(false);
     }

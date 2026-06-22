@@ -39,13 +39,15 @@ export default function Contact() {
       await contactApi.submit(data);
       toast.success('Message sent! I\'ll get back to you soon.');
       reset();
-    } catch (error) {
+    } catch (error: any) {
+      console.error('Contact submission error:', error);
       if (import.meta.env.DEV) {
         console.warn('Backend API is offline. Simulating successful message submission in DEV mode.', error);
         toast.success('Message sent! I\'ll get back to you soon.');
         reset();
       } else {
-        toast.error('Something went wrong. Please try again or email me directly.');
+        const errMsg = error.response?.data?.message || error.message || 'Something went wrong.';
+        toast.error(`Error: ${errMsg} Please try again or email me directly.`);
       }
     } finally {
       setSubmitting(false);

@@ -7,16 +7,25 @@ async function main() {
   console.log('🌱 Seeding database...');
 
   // ─── Admin User ──────────────────────────────────────────────
+  const targetEmail = process.env.ADMIN_EMAIL || 'admin@portfolio.dev';
+  if (targetEmail !== 'admin@portfolio.dev') {
+    await prisma.user.deleteMany({
+      where: { email: 'admin@portfolio.dev' },
+    });
+  }
+
   const passwordHash = await bcrypt.hash(
     process.env.ADMIN_SEED_PASSWORD || 'Admin@Portfolio2024!',
     12,
   );
 
   await prisma.user.upsert({
-    where: { email: process.env.ADMIN_EMAIL || 'admin@portfolio.dev' },
-    update: {},
+    where: { email: targetEmail },
+    update: {
+      passwordHash,
+    },
     create: {
-      email: process.env.ADMIN_EMAIL || 'admin@portfolio.dev',
+      email: targetEmail,
       passwordHash,
       role: 'SUPER_ADMIN',
     },
